@@ -20,7 +20,7 @@
                     Catch ex As Exception
                         ListaNon.Add(Dir)
                     End Try
-                ElseIf Dir.StartsWith("c:\client\Nap") Then
+                ElseIf Dir.StartsWith("c:\client\NAP") Then
                     Try
                         My.Computer.FileSystem.CopyFile(PercorsoOrigine & "\mySchool.exe", Dir & "\mySchool.exe", True)
                         My.Computer.FileSystem.CopyFile(PercorsoOrigine & "\ctrl.dll", Dir & "\ctrl.dll", True)
@@ -31,8 +31,8 @@
                 End If
             Next
         Else
-            For Each Dir As String In System.IO.Directory.GetDirectories("c:\")
-                If Dir.StartsWith("c:\mySchool") Then
+            For Each Dir As String In System.IO.Directory.GetDirectories("c:\mySchool")
+                If Dir.StartsWith("c:\mySchool\mySchool") Then
                     Try
                         My.Computer.FileSystem.CopyFile(PercorsoOrigine & "\mySchool.exe", Dir & "\mySchool.exe", True)
                         My.Computer.FileSystem.CopyFile(PercorsoOrigine & "\ctrl.dll", Dir & "\ctrl.dll", True)
